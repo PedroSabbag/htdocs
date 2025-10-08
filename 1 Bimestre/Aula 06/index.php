@@ -88,7 +88,7 @@
 
 <main>
     <section>
-        <h2>Bem-vindo a Loja de Jogos Nintendo</h2>
+        <h2> Alterando para trabalho LEANDRO ! GIT </h2>
         <p>
             Os jogos da Nintendo marcaram gerações com suas histórias cativantes, personagens icônicos e mundos cheios de magia. 
             Das corridas eletrizantes de Mario Kart às batalhas emocionantes de Pokémon, 
