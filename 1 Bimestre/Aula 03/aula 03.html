@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+</head>
+<body>
+    <!-- Professor fiz meu style separado dai como pediu apenas o Index e receba, deixei ele sem css. -->
+    <h2 align="center">🕹️🎮 Planeta dos Jogos 🎮🕹️</h2>
+
+    <form method="post" action="receber.php">
+        <h3>Informações Pessoal</h3>
+        <fieldset>
+            <div class="info">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" maxlength="40" required>
+            </div>
+            <div class="info">
+                <label for="cpf">Cpf:</label>
+                <input type="text" id="cpf" name="cpf" maxlength="20" required>
+            </div>
+            <div class="info">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" maxlength="40">
+            </div>
+            <div class="info">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" maxlength="20">
+            </div>
+            <div class="info">
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" maxlength="20">
+            </div>
+            <div class="info">
+                <label>Sexo:</label>
+                <div class="sexo">
+                    <input type="radio" id="masculino" name="sexo" value="masculino" required> Masculino
+                    <input type="radio" id="feminino" name="sexo" value="2"> Feminino
+                </div>
+            </div>
+        </fieldset>
+
+        <h3>Detalhes do Pedido</h3>
+        <fieldset>
+            <h4>Jogos Nintendo</h4>
+            <div class="opcoes">
+                <div class="jogos">
+                    <select name="codNintendo">
+                        <option value="">---------</option>
+                        <option value="2">Pokémon - R$ 349,99</option>
+                        <option value="3">Zelda - R$ 399,99</option>
+                        <option value="4">Mario - R$ 299,99</option>
+                    </select>
+                    <select name="qtdNintendo">
+                        <option value="0">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </div>
+
+            <h4>Jogos PS5</h4>
+            <div class="opcoes">
+                <div class="jogos">
+                    <select name="codPs5">
+                        <option value="">---------</option>
+                        <option value="2">Spider-Man 2 - R$ 349,99</option>
+                        <option value="3">The Last of Us 2 - R$ 349,99</option>
+                        <option value="4">God of War 4 - R$ 399,99</option>
+                    </select>
+                    <select name="qtdPs5">
+                        <option value="0">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </div>
+
+            <h4>Jogos Xbox</h4>
+            <div class="opcoes">
+                <div class="jogos">
+                    <select name="codXbox">
+                        <option value="">---------</option>
+                        <option value="2">Cyberpunk 2077 - R$ 299,99</option>
+                        <option value="3">Halo 4 - R$ 349,99</option>
+                        <option value="4">Forza Horizon 5 - R$ 349,99</option>
+                    </select>
+                    <select name="qtdXbox">
+                        <option value="0">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+            </div>
+
+            <h4>Consoles</h4>
+            <div class="opcoes">
+                <div class="jogos">
+                    <select name="codConsole">
+                        <option value="">---------</option>
+                        <option value="1">Nintendo Switch - R$ 2.499,99</option>
+                        <option value="2">PS5 - R$ 3.999,99</option>
+                        <option value="3">Xbox Series X - R$ 3.799,99</option>
+                    </select>
+                    <select name="qtdConsole">
+                        <option value="0">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+
+        <h3>Pagamento e Entrega</h3>
+        <fieldset>
+            <div class="pagamento">
+                <select name="formaPagamento" required>
+                    <option value="">Selecione</option>
+                    <option value="pix">Pix</option>
+                    <option value="credito">Cartão de Crédito (até 6x sem juros)</option>
+                    <option value="debito">Cartão de Débito</option>
+                </select>
+
+                <select name="parcelas">
+                    <option value="">Parcelas (somente crédito)</option>
+                    <option value="1x">1x sem juros</option>
+                    <option value="2x">2x sem juros</option>
+                    <option value="3x">3x sem juros</option>
+                    <option value="4x">4x sem juros</option>
+                    <option value="5x">5x sem juros</option>
+                    <option value="6x">6x sem juros</option>
+                </select>
+            </div>
+
+            
+			<h4>Entrega </h4>                                          
+			<input type="radio" name="codEntrega" value="1" checked /> Código Digital dos Jogos - (Email) <br/>
+			<input type="radio" name="codEntrega" value="2" /> Receber o Produto em Casa - R$ 15,00
+
+            
+			<h4>Ofertas e Promoções </h4>  
+			<input type="checkbox" name="receber1" value="1" /> 
+			Desejo receber mensagens sobre promoções<br />
+			<input type="checkbox" name="receber2" value="1"  /> 
+			Desejo receber mensagens sobre novos produtos
+
+        </fieldset>
+
+        <button type="submit">Finalizar Pedido</button>
+    </form>
+</body>
+</html>
