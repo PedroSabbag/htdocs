@@ -46,6 +46,12 @@
 	$subtotal       = $_SESSION["subtotal"];
 	$valortotal     = $_SESSION["valortotal"];
 
+    require("conecta_banco.php");
+
+	// gravando dados
+	$mysqli->query("INSERT INTO cadcli VALUES ('$cpf','$nome')");
+	echo $mysqli->error;
+
 
 	echo "<div class='container'>";
 	echo "<h2>Confirmação da Venda</h2>";
