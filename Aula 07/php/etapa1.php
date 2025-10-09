@@ -143,7 +143,7 @@ if (isset($_POST["botao"])) {
 
 		Rua:  <input type="text" name="rua" placeholder="Rua Jorginho" size="60" maxlength="50" minlength="5"
 		value="<?php if (isset($_SESSION["rua"])) echo $_SESSION["rua"] ?>">
-		<?php echo $erro_endereco ?> 
+		<?php echo $erro_rua ?> 
 		<br/><br/>
 
 		Complemento:  <input type="text" name="complemento" placeholder="Casa na esquina" size="60" maxlength="50" minlength="5"
