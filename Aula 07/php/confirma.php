@@ -48,9 +48,68 @@
 
     require("conecta_banco.php");
 
-	// gravando dados
-	$mysqli->query("INSERT INTO cadcli VALUES ('$cpf','$nome')");
-	echo $mysqli->error;
+// --- 1. RECEBENDO E TRATANDO OS DADOS ---
+// ETAPA 1 — Cliente
+$id_cliente     = $_POST["id"] ?? '';
+$nome           = $_POST["nome"] ?? '';
+$cpf            = $_POST["cpf"] ?? '';
+$email          = $_POST["email"] ?? '';
+$telefone       = $_POST["telefone"] ?? '';
+$rua            = $_POST["rua"] ?? '';
+$numero         = $_POST["numero"] ?? '';
+$complemento    = $_POST["complemento"] ?? '';
+$cidade         = $_POST["cidade"] ?? '';
+$estado         = $_POST["estado"] ?? '';
+$cep            = $_POST["cep"] ?? '';
+
+// ETAPA 2 — Produto
+$id_produto       = $_POST["idproduto"] ?? '';
+$nome_produto     = $_POST["nomeproduto"] ?? '';
+$descricao        = $_POST["descricao"] ?? '';
+$marca            = $_POST["marca"] ?? '';
+$preco            = $_POST["preco"] ?? '';
+$quantidade_estoque = $_POST["quantidade"] ?? '';
+$caracteristicas  = $_POST["caracteristicas"] ?? '';
+
+// ETAPA 3 — Venda
+$id_venda        = $_POST["idvenda"] ?? '';
+$data_venda      = $_POST["datavenda"] ?? '';
+$endereco_entrega = $_POST["endereco"] ?? '';
+$forma_entrega   = $_POST["formaentrega"] ?? '';
+$forma_pagamento = $_POST["formapagamento"] ?? '';
+$quantidade_venda = $_POST["quantidade"] ?? '';
+$preco_unitario  = $_POST["precounitario"] ?? '';
+$subtotal        = $_POST["subtotal"] ?? '';
+$valor_total     = $_POST["valortotal"] ?? '';
+
+
+// --- 2. CONEXÃO E INSERÇÃO ---
+require("conecta_banco.php");
+
+// Inserção na tabela clientes
+$mysqli->query("INSERT INTO clientes (
+    id_cliente, nome, cpf, email, telefone, rua, numero, complemento, cidade, estado, cep
+) VALUES (
+    '$id_cliente', '$nome', '$cpf', '$email', '$telefone', '$rua', '$numero', '$complemento', '$cidade', '$estado', '$cep'
+)");
+
+// Inserção na tabela produtos
+$mysqli->query("INSERT INTO produtos (
+    id_produto, nome_produto, descricao, marca, preco, quantidade_estoque, caracteristicas
+) VALUES (
+    '$id_produto', '$nome_produto', '$descricao', '$marca', '$preco', '$quantidade_estoque', '$caracteristicas'
+)");
+
+// Inserção na tabela vendas
+$mysqli->query("INSERT INTO vendas (
+    id_venda, id_cliente, data_venda, endereco_entrega, forma_entrega, forma_pagamento, id_produto, quantidade, preco_unitario, subtotal, valor_total
+) VALUES (
+    '$id_venda', '$id_cliente', '$data_venda', '$endereco_entrega', '$forma_entrega', '$forma_pagamento', '$id_produto', '$quantidade_venda', '$preco_unitario', '$subtotal', '$valor_total'
+)");
+
+header("Location: ../index.php?status=cadastro_ok");
+exit(); // Sempre bom usar exit() após o header
+
 
 
 	echo "<div class='container'>";

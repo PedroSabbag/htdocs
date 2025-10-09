@@ -2,7 +2,7 @@
 	$domain="localhost";// localização
 	$user="root";		// usuário
 	$password="";		// senha
-	$database="auça07";	// banco de dados	
+	$database="loja";	// banco de dados	
 
 	// instanciando a classe mysqli
 	$mysqli = new mysqli($domain,$user,$password,$database);

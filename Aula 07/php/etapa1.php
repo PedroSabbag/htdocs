@@ -99,7 +99,7 @@ if (isset($_POST["botao"])) {
 <body>
 <div class="container">
 	<h2>Cadastro Cliente</h2>
-	<form method="POST" action="etapa1.php" class="signup-form">
+	<form action="gravacli.php" method="post"> 
 		Nome:  <input type="text" name="nome" size="60" maxlength="50" minlength="5"
 		value="<?php if (isset($_SESSION["nome"])) echo $_SESSION["nome"] ?>">
 		<?php echo $erro_nome ?> 
