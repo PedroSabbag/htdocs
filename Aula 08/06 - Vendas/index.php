@@ -5,14 +5,16 @@
 	<link rel="stylesheet" href="aula08.css">
 </head>
 <body>
-	<h2>Cadastro de Propriedades</h2>
+	<h2>Cadastro das Vendas</h2>
 	<table border="1" width="600">
 		<tr>
 			<th>Id</th>
-			<th>Propriedade</th>
-			<th>Proprietario</th>
-			<th>Area</th>
-			<th>Cultura</th>
+			<th>Data da Venda</th>
+			<th>IdCli</th>
+			<th>Produto</th>
+			<th>Quantidade</th>
+			<th>Valor Total</th>
+
 		</tr>
 		
 		<?php 
@@ -21,19 +23,20 @@
 		
 			// executar comandos sql
 			// consulta registros da tabela
-			$query = $mysqli->query("select * from propriedade");
+			$query = $mysqli->query("select * from vendas");
 			echo $mysqli->error;
 
 			// carrega consulta de registros
 			while ($tabela = $query->fetch_assoc()){
 				echo "
-				<tr><td align='center'>$tabela[idprop]</td>
-				<td align='center'>$tabela[propriedade]</td>
-				<td align='center'>$tabela[proprietario]</td>
-				<td align='center'>$tabela[area]</td>
-				<td align='center'>$tabela[cultura]</td>
-				<td width='120'><a href='excluir.php?excluir=$tabela[idprop]'>[excluir]</a>
-				<a href='alterar.php?alterar=$tabela[idprop]'>[alterar]</a></td>
+				<tr><td align='center'>$tabela[idvenda]</td>
+				<td align='center'>$tabela[data_venda]</td>
+				<td align='center'>$tabela[idcli]</td>
+				<td align='center'>$tabela[produto]</td>
+				<td align='center'>$tabela[quantidade]</td>
+				<td align='center'>$tabela[valortotal]</td>
+				<td width='120'><a href='excluir.php?excluir=$tabela[idvenda]'>[excluir]</a>
+				<a href='alterar.php?alterar=$tabela[idvenda]'>[alterar]</a></td>
 				</tr>
 			";}
 		?>

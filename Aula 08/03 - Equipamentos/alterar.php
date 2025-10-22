@@ -21,6 +21,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="aula08.css">
 </head>
 <body>
 	<form method="POST" action="alterar.php">
@@ -43,7 +44,7 @@
 <?php 
 	if(isset($_POST["botao"])){
 		$idequipe   = htmlentities($_POST["idequipe"]);
-		$equipamentos  = htmlentities($_POST["equipamento"]);
+		$equipamento  = htmlentities($_POST["equipamento"]);
 		$localizacao = htmlentities($_POST["localizacao"]);
 		$custo = htmlentities($_POST["custo"]);
 		$marcamodelo = htmlentities($_POST["marcamodelo"]);

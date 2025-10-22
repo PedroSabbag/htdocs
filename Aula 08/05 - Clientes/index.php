@@ -5,14 +5,16 @@
 	<link rel="stylesheet" href="aula08.css">
 </head>
 <body>
-	<h2>Cadastro de Propriedades</h2>
+	<h2>Cadastro de Cliente</h2>
 	<table border="1" width="600">
 		<tr>
 			<th>Id</th>
-			<th>Propriedade</th>
-			<th>Proprietario</th>
-			<th>Area</th>
-			<th>Cultura</th>
+			<th>Cliente</th>
+			<th>Cpf/Cnpj</th>
+			<th>Telefone</th>
+			<th>Email</th>
+			<th>Cidade</th>
+
 		</tr>
 		
 		<?php 
@@ -21,19 +23,20 @@
 		
 			// executar comandos sql
 			// consulta registros da tabela
-			$query = $mysqli->query("select * from propriedade");
+			$query = $mysqli->query("select * from clientes");
 			echo $mysqli->error;
 
 			// carrega consulta de registros
 			while ($tabela = $query->fetch_assoc()){
 				echo "
-				<tr><td align='center'>$tabela[idprop]</td>
-				<td align='center'>$tabela[propriedade]</td>
-				<td align='center'>$tabela[proprietario]</td>
-				<td align='center'>$tabela[area]</td>
-				<td align='center'>$tabela[cultura]</td>
-				<td width='120'><a href='excluir.php?excluir=$tabela[idprop]'>[excluir]</a>
-				<a href='alterar.php?alterar=$tabela[idprop]'>[alterar]</a></td>
+				<tr><td align='center'>$tabela[idclientes]</td>
+				<td align='center'>$tabela[nome]</td>
+				<td align='center'>$tabela[cpf_cnpj]</td>
+				<td align='center'>$tabela[telefone]</td>
+				<td align='center'>$tabela[email]</td>
+				<td align='center'>$tabela[cidade]</td>
+				<td width='120'><a href='excluir.php?excluir=$tabela[idclientes]'>[excluir]</a>
+				<a href='alterar.php?alterar=$tabela[idclientes]'>[alterar]</a></td>
 				</tr>
 			";}
 		?>

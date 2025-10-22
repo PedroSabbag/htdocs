@@ -3,16 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="aula08.css">
+
 </head>
 <body>
-	<h2>Cadastro de Propriedades</h2>
+	<h2>Cadastro de Funcionario</h2>
 	<table border="1" width="600">
 		<tr>
 			<th>Id</th>
-			<th>Propriedade</th>
-			<th>Proprietario</th>
-			<th>Area</th>
-			<th>Cultura</th>
+			<th>Funcionario</th>
+			<th>Cargo</th>
+			<th>Salario</th>
 		</tr>
 		
 		<?php 
@@ -21,19 +21,18 @@
 		
 			// executar comandos sql
 			// consulta registros da tabela
-			$query = $mysqli->query("select * from propriedade");
+			$query = $mysqli->query("select * from funcionarios");
 			echo $mysqli->error;
 
 			// carrega consulta de registros
 			while ($tabela = $query->fetch_assoc()){
 				echo "
-				<tr><td align='center'>$tabela[idprop]</td>
-				<td align='center'>$tabela[propriedade]</td>
-				<td align='center'>$tabela[proprietario]</td>
-				<td align='center'>$tabela[area]</td>
-				<td align='center'>$tabela[cultura]</td>
-				<td width='120'><a href='excluir.php?excluir=$tabela[idprop]'>[excluir]</a>
-				<a href='alterar.php?alterar=$tabela[idprop]'>[alterar]</a></td>
+				<tr><td align='center'>$tabela[idfunc]</td>
+				<td align='center'>$tabela[nome]</td>
+				<td align='center'>$tabela[cargo]</td>
+				<td align='center'>$tabela[salario]</td>
+				<td width='120'><a href='excluir.php?excluir=$tabela[idfunc]'>[excluir]</a>
+				<a href='alterar.php?alterar=$tabela[idfunc]'>[alterar]</a></td>
 				</tr>
 			";}
 		?>

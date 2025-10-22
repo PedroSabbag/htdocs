@@ -21,6 +21,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="aula08.css">
 </head>
 <body>
 	<form method="POST" action="alterar.php">

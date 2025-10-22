@@ -2,12 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="aula08.css">
 </head>
 <body>
 	<h2>Cadastro de culturas</h2>
-	<a href="adicionar.php"><button>Adicionar</button></a>
-	<a href="pesquisar.php"><button>Pesquisar</button></a>
-	<br />
 	<table border="1" width="600">
 		<tr>
 			<th>Id</th>
@@ -40,5 +38,9 @@
 			";}
 		?>
 	</table>
+	<div class="botoes-centrais">
+        <a href="adicionar.php"><button>Adicionar</button></a>
+        <a href="pesquisar.php"><button>Pesquisar</button></a>
+    </div>
 </body>
 </html>
