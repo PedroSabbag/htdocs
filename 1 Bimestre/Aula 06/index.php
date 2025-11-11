@@ -95,6 +95,10 @@
             passando pelas aventuras épicas de The Legend of Zelda, a diversão é garantida para todos os tipos de jogadores.
             Em nossa loja, você encontra desde os grandes clássicos até os lançamentos mais recentes para viver experiências inesquecíveis.
 
+            git add . 
+            git commit -m "Alteração"
+            git push
+            git log
 
         </p>
     </section>

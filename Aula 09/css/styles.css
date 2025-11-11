@@ -1,0 +1,95 @@
+/* ====== ESTILO GERAL ====== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f3f7; /* cinza-lilás suave */
+    color: #2c2c2c;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* ====== TÍTULOS ====== */
+h1 {
+    color: #6a1b9a; /* roxo principal */
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 16px;
+    color: #444;
+    margin: 10px auto 30px;
+    width: 80%;
+    line-height: 1.5;
+}
+
+/* ====== GALERIA DE IMAGENS ====== */
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.galeria img {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #d8cde8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(106, 27, 154, 0.3);
+}
+
+/* ====== MENU PRINCIPAL ====== */
+.loja {
+    background-color: #ffffff;
+    border: 1px solid #d8cde8;
+    border-radius: 12px;
+    width: 320px;
+    margin: 0 auto 60px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.loja h1 {
+    color: #8e24aa;
+    margin-bottom: 20px;
+}
+
+/* ====== BOTÕES ====== */
+button {
+    background-color: #8e24aa; /* roxo médio */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #6a1b9a; /* roxo escuro */
+    transform: scale(1.05);
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 600px) {
+    .galeria img {
+        width: 90%;
+        height: auto;
+    }
+
+    .loja {
+        width: 90%;
+    }
+
+    h2 {
+        width: 90%;
+    }
+}

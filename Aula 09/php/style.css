@@ -1,0 +1,118 @@
+/* Paleta de Cores Sóbria e Profissional */
+/*
+  #36454F (Fundo Cinza Chumbo/Slate)
+  #FFFFFF (Branco Puro - Contêiner)
+  #0047AB (Azul Marinho - Botão Primário)
+  #003380 (Azul Marinho Escuro - Hover)
+  #495057 (Cinza Escuro - Texto)
+*/
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #36454F; /* Fundo Cinza Chumbo/Slate (mais escuro e profissional) */
+    color: #495057; /* Texto em cinza escuro para melhor legibilidade no container branco */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+/* --- Container do Menu (.loja) --- */
+
+.loja {
+    background-color: #ffffff; /* Mantendo o branco para alto contraste com o fundo */
+    padding: 40px 30px;
+    border-radius: 8px; /* Cantos levemente menos arredondados, mais formal */
+    /* Sombra mais focada e menos dispersa */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 320px; /* Ligeiramente mais largo */
+    border-top: 4px solid #0047AB; /* Linha de destaque para um toque corporativo */
+}
+
+.loja h1 {
+    font-size: 1.7em;
+    color: #343a40; /* Título bem escuro */
+    margin-bottom: 35px; /* Mais espaço */
+    font-weight: 700; /* Mais peso para o título */
+    letter-spacing: 0.5px;
+}
+
+/* --- Estilo dos Botões --- */
+
+.loja button {
+    display: block;
+    width: 100%;
+    padding: 14px; /* Ajuste sutil */
+    margin: 12px 0; /* Espaçamento ajustado */
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+    background-color: #0047AB; /* Azul Marinho (mais formal) */
+    border: none;
+    border-radius: 6px; /* Menos arredondado */
+    cursor: pointer;
+    /* Transições profissionais */
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.1s;
+    text-transform: uppercase; /* Deixa o texto em maiúsculas (opcionalmente) */
+    letter-spacing: 1px;
+}
+
+/* Efeito Hover (passar o mouse) e Focus (acessibilidade) */
+.loja button:hover,
+.loja button:focus {
+    background-color: #003380; /* Azul Marinho Escuro no hover */
+    /* Sombra de elevação sutil */
+    box-shadow: 0 4px 12px rgba(0, 71, 171, 0.3);
+    transform: translateY(-1px); /* Elevação mínima */
+    outline: none;
+}
+
+/* Estilo especial para o botão "Voltar" */
+.loja button:last-child {
+    margin-top: 30px;
+    background-color: #adb5bd; /* Cinza Neutro (Neutro/Secundário) */
+    color: #343a40; /* Texto escuro no botão cinza para contraste */
+}
+
+.loja button:last-child:hover {
+    background-color: #6c757d;
+    color: white; /* Texto branco no hover para o cinza mais escuro */
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.2);
+}
+
+/* --- Estilos para a Galeria --- */
+/* Mantive os estilos de galeria, mas com cores mais sóbrias se aplicável */
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galeria img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Sombra mais marcada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef; /* Borda sutil */
+}
+
+.galeria img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Sombra mais escura no hover */
+}
